@@ -1,0 +1,123 @@
+/* Algemene body-stijlen om de layout in het midden van de pagina te plaatsen */
+body {
+    font-family: Arial, sans-serif; /* Gebruik een leesbaar lettertype */
+    background-color: #535353; /* Lichte achtergrondkleur voor een frisse uitstraling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container voor het gehele spel om het gecentreerd en netjes weer te geven */
+.game-container {
+    background-color: #ffffff; /* Witte achtergrond voor contrast met de body */
+    padding: 20px; /* Padding voor ruimte binnen de container */
+    border-radius: 10px; /* Afgeronde hoeken voor een zachte look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+    text-align: center;
+    width: 320px; /* Maximale breedte */
+}
+
+/* Titelstijl */
+h1 {
+    color: #333; /* Donkere kleur voor contrast */
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Onderlijn voor visuele scheiding */
+}
+
+/* Stijlen voor de disclaimer om deze op te laten vallen */
+.disclaimer {
+    color: #ff6b6b; /* Rode kleur om aandacht te trekken */
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffe6e6; /* Zachte achtergrondkleur om op te vallen */
+    border: 1px solid #ff6b6b;
+    border-radius: 5px; /* Afgeronde hoeken */
+}
+
+/* Layout van het spelbord in een grid met kolommen voor de kaarten */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 70px); /* 4 kolommen van 70px breed */
+    gap: 10px; /* Ruimte tussen kaarten */
+    margin: 20px 0;
+}
+
+/* Stijl voor elke individuele kaart */
+.card {
+    width: 70px;
+    height: 70px;
+    background-color: #b3d4fc; /* Blauwachtige kleur als achterkant van de kaart */
+    border-radius: 8px; /* Zachte, afgeronde hoeken */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Grote tekst voor de kaartwaarde */
+    color: #333;
+    cursor: pointer; /* Cursor verandert naar pointer voor interactiviteit */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
+    transition: background-color 0.3s, transform 0.2s; /* Animaties voor visuele feedback */
+}
+
+/* Stijl voor een omgedraaide kaart */
+.card.flipped {
+    background-color: #ffd700; /* Gele kleur voor omgedraaide kaarten */
+    color: #333;
+    cursor: default;
+    transform: scale(1.05); /* Vergroot de kaart lichtjes */
+}
+
+/* Stijlen voor de score en level aanduiding */
+#score, #level-display {
+    font-weight: bold;
+    color: #007acc; /* Blauw om de tekst op te laten vallen */
+}
+
+/* Stijlen voor knoppen */
+button {
+    background-color: #007acc; /* Blauw voor uniformiteit */
+    color: #fff; /* Witte tekst voor contrast */
+    border: none;
+    padding: 10px 20px; /* Ruimte voor klikbaarheid */
+    border-radius: 5px; /* Afgeronde hoeken */
+    font-size: 14px;
+    cursor: pointer; /* Cursor verandert naar pointer voor interactiviteit */
+    transition: background-color 0.3s; /* Hover-animatie */
+    margin-top: 10px;
+}
+
+/* Stijl voor de knop wanneer de muis eroverheen gaat */
+button:hover {
+    background-color: #005f99; /* Donkerdere kleur bij hover */
+}
+
+/* Stijlen voor het win-bericht dat in het midden van het scherm verschijnt */
+#win-message {
+    position: fixed; /* Plaats het vast in het midden */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centreer horizontaal en verticaal */
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Diepte voor focus */
+    border-radius: 10px;
+    z-index: 1000; /* Plaats boven andere elementen */
+}
+
+/* Tekststijl binnen het win-bericht */
+#win-message h2 {
+    font-size: 18px;
+    color: #007acc;
+    margin-bottom: 10px;
+}
+
+/* Verbergingsklasse voor elementen die niet zichtbaar moeten zijn */
+.hidden {
+    display: none;
+}

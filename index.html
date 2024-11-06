@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Koppel de externe stylesheet voor stijlen -->
+</head>
+<body>
+    <div class="game-container"> <!-- Centraal gepositioneerde container voor het spel -->
+        <h1>Memory Game</h1> <!-- Titel van het spel -->
+        
+        <!-- Disclaimer om de speler te informeren rustig te spelen -->
+        <p class="disclaimer">⚠️ Let op: Klik rustig op de kaarten. Te snel klikken kan problemen veroorzaken.</p>
+        
+        <!-- Level display om het huidige level van het spel weer te geven -->
+        <p>Level: <span id="level-display">1</span></p>
+        
+        <!-- Spelbord waar de kaarten dynamisch worden geladen -->
+        <div id="game-board"></div>
+        
+        <!-- Scoreweergave om de huidige score van de speler te tonen -->
+        <p>Score: <span id="score">0</span></p>
+        
+        <!-- Knop om het spel opnieuw te starten naar level 1 -->
+        <button id="restart-button">Restart Game</button>
+        
+        <!-- Win-bericht dat verschijnt na het voltooien van een level of het hele spel -->
+        <div id="win-message" class="hidden">
+            <h2></h2> <!-- Dynamische tekst binnen het win-bericht -->
+            <button id="play-again-button" class="hidden">Play Again</button> <!-- Knop om het spel opnieuw te starten na het winnen van level 3 -->
+        </div>
+    </div>
+    
+    <!-- Koppel het hoofd JavaScript-bestand voor spel logica en interactiviteit -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
